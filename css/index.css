@@ -63,6 +63,10 @@ h1, h2, h3, h4, h5 {
 
 /* Copy and paste your work from yesterday here and start to refactor into flexbox */
 
+h1, h2, h3, div, nav, header, section, p , a{
+    border: 1px solid gray;
+}
+
 
 h1{
 	font-size: 32px;
@@ -81,18 +85,27 @@ p{
 	width: 880px;
 }
 nav{
-	padding: 20px 0 20px 0;
-	display: flex;
+    display: flex;
 	justify-content: space-between;
-	align-items: center;
 }
 
-nav a{
-	color: gray;
-	text-decoration: none;
+#links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    align-self: center;
 }
-nav a:visited{
-	color: gray;
+
+a{
+    padding: 20px 0 20px 0;
+    color: gray;
+    text-decoration: none;
+}
+
+a:visited{
+    color: gray;
+    text-decoration: none;
 }
 
 #iod{
@@ -115,15 +128,13 @@ nav a:visited{
 .title{
 	padding: 20px 0 20px 0;
 	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.title img{
+.title-img{
     width: 50%;
-}
-#topic{
-	padding: 10px 0 10px 0;
 }
 
 .content{
@@ -185,7 +196,7 @@ ul{
 	list-style-position: inside;
 }
 
-.topportion, .bottomportion{
+.box{
 	padding: 20px 0 20px 0;
 	display: flex;
 	justify-content: space-between;
@@ -205,4 +216,51 @@ footer{
 
 address{
 	margin-top: 5%;
+}
+@media(max-width: 800px){
+    
+    .title{
+        display:flex;
+        flex-direction: column;
+    }
+    .title-img{
+        display: none;
+    }
+
+    nav{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media(max-width: 500px){
+    
+    body{
+        max-width: 100%;
+    }
+    
+    .title-img{
+        display: none;
+    }
+
+    .box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .mid-content{
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    .middle-img{
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    #feat, #about, #services, #product, #vision{
+        width: 90%;
+    }
 }
