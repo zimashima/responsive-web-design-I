@@ -89,16 +89,14 @@ nav{
 	justify-content: space-between;
 }
 
-#links{
+.links{
     display: flex;
+    width: 75%;
     justify-content: space-between;
     align-items: center;
-    align-content: center;
-    align-self: center;
 }
 
 a{
-    padding: 20px 0 20px 0;
     color: gray;
     text-decoration: none;
 }
@@ -217,34 +215,81 @@ footer{
 address{
 	margin-top: 5%;
 }
-@media(max-width: 800px){
+
+address p{
     
+}
+@media(max-width: 800px){
+
+    .container{
+        max-width: 100%;
+    }
+
+    #iod{
+        font-size: 60px;
+    }
     .title{
         display:flex;
         flex-direction: column;
     }
+
     .title-img{
         display: none;
     }
-
-    nav{
+    
+    nav {
         display: flex;
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
     }
+
+    .links{
+        display: flex;
+        width: 100%;
+
+    }
+        
+    .middle-img{
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
 }
 
 @media(max-width: 500px){
     
-    body{
+    nav{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .links{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .links a{
+        padding: 2%;
+        border-bottom: 1px solid gray;
+    }
+
+    #iod{
+        font-size: 48px;
+    }
+    .container{
         max-width: 100%;
     }
     
     .title-img{
         display: none;
     }
-
+    .links a{
+        display: block;
+        width: 100%;
+    }
     .box{
         display: flex;
         flex-direction: column;
@@ -255,11 +300,7 @@ address{
         width: 90%;
         margin: 0 auto;
     }
-    
-    .middle-img{
-        max-width: 100%;
-        margin: 0 auto;
-    }
+
     #feat, #about, #services, #product, #vision{
         width: 90%;
     }
